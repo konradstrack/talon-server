@@ -29,7 +29,6 @@ def extract_signature(request):
     logger.info("Extracting reply and signature from: %s ...", text[:80])
 
     reply, sig = signature.extract(text, sender)
-    print(reply, sig)
     return {'reply': reply, 'signature': sig}
 
 if __name__ == '__main__':
